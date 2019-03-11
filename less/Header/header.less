@@ -1,28 +1,29 @@
 header {
     padding: 50px 0;
-    position: absolute;
-    top: 0px;
     width: 100%;
     background: @HeaderBG;
     .flex(row, space-around, center);
     border-bottom: 1px groove @AppBorder;
     nav {
-        width: 40%;
-        display: flex;
-        justify-content: space-evenly;
+        .flex(column, center, center);
         a {
             color: @AppWhite;
             font-size: 1.5rem;
             text-decoration: none;
-            transition: font-size 1s ease 0s;
+            transition: color 1s ease-out 0s;
+            padding: 10px 0;
             &:hover {
-                font-size: 1.7rem;
+                color: @AppDark;
             }
         }
     }
-    h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        color: @AppWhite;
+    div {
+        height: 100%;
+        .flex(column, space-between, center);
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: @AppWhite;
+        }
     }
 }

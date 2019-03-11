@@ -124,8 +124,6 @@ table {
 }
 header {
   padding: 50px 0;
-  position: absolute;
-  top: 0px;
   width: 100%;
   background: #06560970;
   display: flex;
@@ -135,27 +133,99 @@ header {
   border-bottom: 1px groove #1D2A1D;
 }
 header nav {
-  width: 40%;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 header nav a {
   color: #E9E9E9;
   font-size: 1.5rem;
   text-decoration: none;
-  transition: font-size 1s ease 0s;
+  transition: color 1s ease-out 0s;
+  padding: 10px 0;
 }
 header nav a:hover {
-  font-size: 1.7rem;
+  color: #7D7B7B;
 }
-header h1 {
-  font-size: 3rem;
+header div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header div h1 {
+  font-size: 4rem;
   font-weight: bold;
   color: #E9E9E9;
 }
+.cta {
+  margin-top: 30px;
+  background: #E9E9E9;
+  border-radius: 50px;
+  padding: 20px 50px;
+  transition: padding 1s ease 0s;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #065608;
+}
+.cta:hover {
+  padding: 25px 60px;
+}
+.main {
+  margin-top: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #E9E9E9;
+  width: 100%;
+  border-radius: 5% 5% 0px 0px;
+}
+.main h2 {
+  margin-top: -65px;
+  background: #E9E9E9;
+  padding: 15px 30px;
+  font-size: 3rem;
+  width: fit-content;
+  color: #065608;
+  border-radius: 50px 50px 0px 0px;
+}
+.main p {
+  margin: 100px;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about .people {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.about .people .person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.about .people .person img {
+  max-width: 100%;
+}
+.about .people .person h3 {
+  font-size: 3rem;
+}
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background: #E9E9E9 url(../images/door-key.jpg) no-repeat fixed center;
+  background: #E9E9E9 url(../images/door-key.jpg) fixed no-repeat center;
   background-size: cover;
 }
 .container {
@@ -166,5 +236,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #7D7B7B;
+}
+footer {
+  text-align: center;
+  border-top: 1px dashed #9EA3A4;
+  color: #7D7B7B;
+  background: #E9E9E9;
+  width: 100%;
+  border-radius: 0px 0px 5% 5%;
+  padding: 30px 0;
+  white-space: pre-line;
+  line-height: 2;
 }
