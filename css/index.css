@@ -174,7 +174,7 @@ header div h1 {
   padding: 25px 60px;
 }
 .main {
-  margin-top: 70vh;
+  margin-top: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -230,8 +230,32 @@ header div h1 {
 .about .people .person h4 {
   font-size: 1.5rem;
 }
+.us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px;
+  background: rgba(233, 233, 233, 0.541);
+  width: 100%;
+}
+.us a {
+  font-size: 1.7rem;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 25px 15px;
+  color: #065608;
+  border: 1px inset #1D2A1D;
+  display: block;
+  transition: font-size 1s ease-out 0s;
+}
+.us a:hover {
+  font-size: 2rem;
+}
 .main.about {
   border-radius: 150px 150px 0 0;
+  margin-top: 65px;
 }
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
