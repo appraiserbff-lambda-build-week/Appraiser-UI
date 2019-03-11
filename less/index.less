@@ -1,6 +1,17 @@
 @import 'reset.less';
 @import 'mixins.less';
 @import 'header/header.less';
+// Global
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: @AppWhite url(../images/door-key.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+.container {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    .flex(column, center, center);
+    background: @AppDark;
 }

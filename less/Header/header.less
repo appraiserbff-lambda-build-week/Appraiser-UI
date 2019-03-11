@@ -1,16 +1,24 @@
 header {
-    padding: 15px;
+    padding: 50px 0;
     position: absolute;
     top: 0px;
-    background-color: @AppGreen;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: @HeaderBG;
+    .flex(row, space-around, center);
+    border-bottom: 1px groove @AppBorder;
     nav {
-        width: 70%;
+        width: 40%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        a {
+            color: @AppWhite;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: font-size 1s ease 0s;
+            &:hover {
+                font-size: 1.7rem;
+            }
+        }
     }
     h1 {
         font-size: 3rem;
