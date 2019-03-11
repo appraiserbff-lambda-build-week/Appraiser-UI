@@ -32,8 +32,9 @@ footer {
 
 .sticky {
     position: fixed;
+    padding: 20px 30px;
     top: 0px;
-    margin-top: 0px;
+    margin: 0px;
     opacity: 0.95;
     background: @HeaderBG;
     .flex(row, center, center);
@@ -42,6 +43,7 @@ footer {
     border-radius: 0px;
     div {
         background: @AppWhite;
+        width: fit-content;
         border-radius: 50px;
         padding: 20px 50px;
         transition: padding 1s ease 0s;
@@ -51,8 +53,14 @@ footer {
         }
     }
     &:hover {
-        padding: 20px 50px;
+        padding: 20px 30px;
         cursor: default;
+    }
+    @media @tab {
+        margin-left: -150px;
+    }
+    @media @tab {
+        margin-left: -80px;
     }
 }
 

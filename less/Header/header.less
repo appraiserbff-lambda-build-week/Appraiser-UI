@@ -3,7 +3,13 @@ header {
     width: 100%;
     background: @HeaderBG;
     .flex(row, space-around, center);
+    flex-wrap: wrap;
     border-bottom: 1px groove @AppBorder;
+    img {
+        @media @tab {
+            width: 50%;
+        }
+    }
     nav {
         .flex(column, center, center);
         a {
@@ -16,6 +22,11 @@ header {
                 color: @AppDark;
             }
         }
+        @media @tab {
+            width: 100%;
+            .flex(row, space-around, center);
+            padding-top: 50px;
+        }
     }
     div {
         height: 100%;
@@ -24,6 +35,12 @@ header {
             font-size: 4rem;
             font-weight: bold;
             color: @AppWhite;
+            @media @tab {
+                font-size: 3.5rem;
+            }
+        }
+        @media @tab {
+            width: 50%;
         }
     }
 }

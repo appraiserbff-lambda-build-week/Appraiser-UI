@@ -130,7 +130,13 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   border-bottom: 1px groove #1D2A1D;
+}
+@media (max-width: 800px) {
+  header img {
+    width: 50%;
+  }
 }
 header nav {
   display: flex;
@@ -148,6 +154,16 @@ header nav a {
 header nav a:hover {
   color: #7D7B7B;
 }
+@media (max-width: 800px) {
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+  }
+}
 header div {
   height: 100%;
   display: flex;
@@ -160,12 +176,22 @@ header div h1 {
   font-weight: bold;
   color: #E9E9E9;
 }
+@media (max-width: 800px) {
+  header div h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 800px) {
+  header div {
+    width: 50%;
+  }
+}
 .cta {
   margin-top: 30px;
   background: #E9E9E9;
   border-radius: 50px;
   padding: 20px 50px;
-  transition: padding 1s ease 0s;
+  transition: padding 1s ease-out 0s;
   font-size: 1.2rem;
   text-decoration: none;
   color: #065608;
@@ -174,7 +200,7 @@ header div h1 {
   padding: 25px 60px;
 }
 .main {
-  margin-top: 70%;
+  margin-top: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -220,15 +246,26 @@ header div h1 {
   width: 500px;
   height: 500px;
   border-radius: 150px;
-  background-size: cover;
   margin: 100px 0;
   box-shadow: #7D7B7B 4px 8px 16px;
 }
 .about .people .person h3 {
   font-size: 3rem;
 }
+@media (max-width: 500px) {
+  .about .people .person h3 {
+    font-size: 2.3rem;
+  }
+}
 .about .people .person h4 {
   font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .about .people .person {
+    width: 300px;
+    height: 300px;
+    border-radius: 100px;
+  }
 }
 .us {
   display: flex;
@@ -242,11 +279,12 @@ header div h1 {
 }
 .us a {
   font-size: 1.7rem;
+  background: #E9E9E9;
   text-decoration: none;
-  padding: 5px 10px;
-  margin: 25px 15px;
-  color: #065608;
-  border: 1px inset #1D2A1D;
+  padding: 15px 20px;
+  margin: 25px 35px;
+  color: #BF6363;
+  border-radius: 50px;
   display: block;
   transition: font-size 1s ease-out 0s;
 }
@@ -284,8 +322,9 @@ footer {
 }
 .sticky {
   position: fixed;
+  padding: 20px 30px;
   top: 0px;
-  margin-top: 0px;
+  margin: 0px;
   opacity: 0.95;
   background: #06560970;
   display: flex;
@@ -298,6 +337,7 @@ footer {
 }
 .sticky div {
   background: #E9E9E9;
+  width: fit-content;
   border-radius: 50px;
   padding: 20px 50px;
   transition: padding 1s ease 0s;
@@ -307,8 +347,18 @@ footer {
   cursor: pointer;
 }
 .sticky:hover {
-  padding: 20px 50px;
+  padding: 20px 30px;
   cursor: default;
+}
+@media (max-width: 800px) {
+  .sticky {
+    margin-left: -150px;
+  }
+}
+@media (max-width: 800px) {
+  .sticky {
+    margin-left: -80px;
+  }
 }
 .nojump {
   background: none;

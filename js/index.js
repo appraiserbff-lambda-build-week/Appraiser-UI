@@ -11,7 +11,7 @@ class People {
         this.name = this.person.querySelector('h3').innerText;
         this.position = this.person.querySelector('h4').innerText;
         this.data = this.person.dataset.person;
-        this.person.style.background = `linear-gradient( rgba(0, 0, 0, 0.25), rgba(50, 50, 50, 0.45)), url('images/${this.data}.jpg') scroll no-repeat center`;
+        this.person.style.background = `linear-gradient( rgba(0, 0, 0, 0.25), rgba(50, 50, 50, 0.45)), url('images/${this.data}.jpg') scroll no-repeat center / contain`;
     }
 }
 
