@@ -29,3 +29,34 @@ footer {
     white-space: pre-line;
     line-height: 2;
 }
+
+.sticky {
+    position: fixed;
+    top: 0px;
+    margin-top: 0px;
+    opacity: 0.95;
+    background: @HeaderBG;
+    .flex(row, center, center);
+    width: 100%;
+    border-bottom: 1px groove @AppBorder;
+    border-radius: 0px;
+    div {
+        background: @AppWhite;
+        border-radius: 50px;
+        padding: 20px 50px;
+        transition: padding 1s ease 0s;
+        &:hover {
+            padding: 25px 60px;
+            cursor: pointer;
+        }
+    }
+    &:hover {
+        padding: 20px 50px;
+        cursor: default;
+    }
+}
+
+.nojump {
+    background: none;
+    border-bottom: none;
+}

@@ -3,16 +3,27 @@
     .people {
         margin-top: 100px;
         .flex(column, center, center);
-        width: 80%;
+        width: 60%;
         .person {
-            .flex(column, center, center);
+            color: @AppWhite;
+            .flex(column, flex-end, center);
             width: 100%;
-            img {
-                max-width: 100%;
-            }
+            width: 500px;
+            height: 500px;
+            border-radius: 150px;
+            background-size: cover;
+            margin: 100px 0;
+            box-shadow: @AppDark 4px 8px 16px;
             h3 {
                 font-size: 3rem;
             }
+            h4 {
+                font-size: 1.5rem;
+            }
         }
     }
+}
+
+.main.about {
+    border-radius: 150px 150px 0 0;
 }
