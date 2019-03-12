@@ -1,30 +1,28 @@
 header {
-    padding: 50px 0;
+    padding: 0 0 50px;
     width: 100%;
     background: @HeaderBG;
-    .flex(row, space-around, center);
+    .flex(row, center, center);
     flex-wrap: wrap;
     border-bottom: 1px groove @AppBorder;
-    img {
-        @media @tab {
-            width: 50%;
+    div {
+        .flex(row, center, center);
+        width: 50%;
+        img {
+            max-width: 400px;
         }
     }
     nav {
-        .flex(column, flex-end, center);
-        a,
-        p {
+        width: 100%;
+        .flex(row, space-around, center);
+        a {
             color: @AppWhite;
             font-size: 1.5rem;
             text-decoration: none;
             transition: color 1s ease-out 0s;
             padding: 10px 0;
-            img {
-                width: 20px;
-            }
             &:hover {
                 color: @AppDark;
-                cursor: pointer;
             }
         }
         input {

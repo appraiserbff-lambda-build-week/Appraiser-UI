@@ -50,23 +50,8 @@ function engage() {
 peeps.forEach(per => new People(per));
 peeps.forEach(per => new Plinks(per));
 
-// Add login feature
-let login = document.createElement('p');
-login.innerHTML = '<img src="images/dropdown.png">Log In';
-login.addEventListener('click', function () {
-    login.classList.toggle('dropdown');
-    let username = document.createElement('input'),
-        password = document.createElement('input'),
-        inputs = document.createElement('div');
-    username.placeholder = 'Username';
-    password.placeholder = 'Password';
-    inputs.appendChild(username);
-    inputs.appendChild(password);
-    nav.children.length === 4 ? nav.appendChild(inputs) : null;
-    let dd = nav.querySelector('div'),
-        ddc = dd.querySelectorAll('input');
-    dd.classList.toggle('drop');
-    dd.classList.contains('drop') ? ddc.forEach(dd => dd.classList.add('dd')) : ddc.forEach(dd => dd.classList.remove('dd'));
-    inputs.classList.add('drop');
-})
+// Add login link
+let login = document.createElement('a');
+login.innerHTML = 'Log In';
+login.href = 'https://ajbrush.com/Appraiser';
 nav.appendChild(login);
