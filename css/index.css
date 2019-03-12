@@ -131,6 +131,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px groove #1D2A1D;
+  width: 100%;
 }
 header div.img {
   display: flex;
