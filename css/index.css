@@ -241,6 +241,9 @@ a.cta:hover {
   align-items: center;
   width: 60%;
 }
+.about .people a {
+  text-decoration: none;
+}
 .about .people .person {
   color: #E9E9E9;
   display: flex;

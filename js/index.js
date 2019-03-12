@@ -4,6 +4,7 @@ let peeps = document.querySelectorAll('.person'),
     header = document.querySelector('header'),
     us = document.querySelector('.us'),
     nav = document.querySelector('nav'),
+    main = document.querySelector('.main'),
     sticky = cta.offsetTop;
 
 // People Class
@@ -28,9 +29,19 @@ class Plinks extends People {
         this.element.innerText = this.name;
         const us = document.querySelector('.us');
         us.appendChild(this.element);
-        console.log(this.element);
     }
 }
+
+// Portfolio Data
+let pdata = {
+    gannon: 'hhtps://gannon.dev',
+    john: 'https://johnoro.netlify.com/',
+    aj: '#',
+    tom: '#',
+    will: 'https://brellin.github.io/portfolio/',
+    sammy: '#',
+    manjula: '#'
+};
 
 // CTA Scroll
 window.onscroll = function () { engage() };
