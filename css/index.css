@@ -368,11 +368,23 @@ form textarea {
   top: -200px;
   left: 225px;
 }
+@media (max-width: 500px) {
+  .about .people .person .git {
+    top: -125px;
+    left: 150px;
+  }
+}
 .about .people .person .in {
   width: 50px;
   position: relative;
   top: -200px;
   left: 225px;
+}
+@media (max-width: 500px) {
+  .about .people .person .in {
+    top: -125px;
+    left: 150px;
+  }
 }
 .us {
   display: flex;
