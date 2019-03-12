@@ -11,16 +11,24 @@ header {
         }
     }
     nav {
-        .flex(column, center, center);
-        a {
+        .flex(column, flex-end, center);
+        a,
+        p {
             color: @AppWhite;
             font-size: 1.5rem;
             text-decoration: none;
             transition: color 1s ease-out 0s;
             padding: 10px 0;
+            img {
+                width: 20px;
+            }
             &:hover {
                 color: @AppDark;
+                cursor: pointer;
             }
+        }
+        input {
+            display: none;
         }
         @media @tab {
             width: 100%;
@@ -28,18 +36,12 @@ header {
             padding-top: 50px;
         }
     }
-    div {
-        height: 100%;
-        .flex(column, space-between, center);
-        h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            color: @AppWhite;
-            @media @tab {
-                font-size: 3.5rem;
-            }
-        }
+    h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        color: @AppWhite;
         @media @tab {
+            font-size: 3.5rem;
             width: 50%;
         }
     }

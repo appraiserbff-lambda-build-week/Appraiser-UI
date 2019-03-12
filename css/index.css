@@ -141,18 +141,28 @@ header {
 header nav {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
-header nav a {
+header nav a,
+header nav p {
   color: #E9E9E9;
   font-size: 1.5rem;
   text-decoration: none;
   transition: color 1s ease-out 0s;
   padding: 10px 0;
 }
-header nav a:hover {
+header nav a img,
+header nav p img {
+  width: 20px;
+}
+header nav a:hover,
+header nav p:hover {
   color: #7D7B7B;
+  cursor: pointer;
+}
+header nav input {
+  display: none;
 }
 @media (max-width: 800px) {
   header nav {
@@ -164,29 +174,25 @@ header nav a:hover {
     padding-top: 50px;
   }
 }
-header div {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-header div h1 {
+header h1 {
   font-size: 4rem;
   font-weight: bold;
   color: #E9E9E9;
 }
 @media (max-width: 800px) {
-  header div h1 {
+  header h1 {
     font-size: 3.5rem;
-  }
-}
-@media (max-width: 800px) {
-  header div {
     width: 50%;
   }
 }
-.cta {
+.ctaholder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+a.cta {
   margin-top: 30px;
   background: #E9E9E9;
   border-radius: 50px;
@@ -196,7 +202,7 @@ header div h1 {
   text-decoration: none;
   color: #065608;
 }
-.cta:hover {
+a.cta:hover {
   padding: 25px 60px;
 }
 .main {
@@ -322,45 +328,45 @@ footer {
 }
 .sticky {
   position: fixed;
-  padding: 20px 30px;
   top: 0px;
-  margin: 0px;
-  opacity: 0.95;
+  padding: 35px 0;
   background: #06560970;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   border-bottom: 1px groove #1D2A1D;
-  border-radius: 0px;
 }
-.sticky div {
-  background: #E9E9E9;
-  width: fit-content;
-  border-radius: 50px;
-  padding: 20px 50px;
-  transition: padding 1s ease 0s;
+.sticky a {
+  margin-top: 0px;
 }
-.sticky div:hover {
-  padding: 25px 60px;
-  cursor: pointer;
-}
-.sticky:hover {
-  padding: 20px 30px;
-  cursor: default;
-}
-@media (max-width: 800px) {
-  .sticky {
-    margin-left: -150px;
-  }
-}
-@media (max-width: 800px) {
-  .sticky {
-    margin-left: -80px;
-  }
+.login-stick {
+  position: absolute;
+  top: 0px;
 }
 .nojump {
   background: none;
   border-bottom: none;
+  padding: 0px;
+}
+.no-jump {
+  margin-bottom: 200px;
+}
+.dd {
+  border-radius: 35px;
+  display: block;
+}
+.drop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  background: #E9E9E9;
+  position: absolute;
+  top: 220px;
+  right: 50px;
+  border-radius: 15px;
+  height: 100px;
+}
+.dropdown {
+  background: #E9E9E9;
+  color: #7D7B7B;
+  border-radius: 15px 15px 0 0;
 }

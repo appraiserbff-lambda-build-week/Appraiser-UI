@@ -1,10 +1,11 @@
+// Imports
 @import 'reset.less';
 @import 'mixins.less';
 @import 'Header/header.less';
 @import 'CTA/cta.less';
 @import 'Main/main.less';
 @import 'About/about.less';
-// Global
+// Global Styles
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background: @AppWhite url(../images/door-key.jpg) fixed no-repeat center;
@@ -30,41 +31,51 @@ footer {
     line-height: 2;
 }
 
+// Style for CTA to stay at top of page
 .sticky {
     position: fixed;
-    padding: 20px 30px;
     top: 0px;
-    margin: 0px;
-    opacity: 0.95;
+    padding: 35px 0;
     background: @HeaderBG;
-    .flex(row, center, center);
-    width: 100%;
     border-bottom: 1px groove @AppBorder;
-    border-radius: 0px;
-    div {
-        background: @AppWhite;
-        width: fit-content;
-        border-radius: 50px;
-        padding: 20px 50px;
-        transition: padding 1s ease 0s;
-        &:hover {
-            padding: 25px 60px;
-            cursor: pointer;
-        }
+    a {
+        margin-top: 0px;
     }
-    &:hover {
-        padding: 20px 30px;
-        cursor: default;
-    }
-    @media @tab {
-        margin-left: -150px;
-    }
-    @media @tab {
-        margin-left: -80px;
-    }
+}
+
+.login-stick {
+    position: absolute;
+    top: 0px;
 }
 
 .nojump {
     background: none;
     border-bottom: none;
+    padding: 0px;
+}
+
+.no-jump {
+    margin-bottom: 200px;
+}
+
+.dd {
+    border-radius: 35px;
+    display: block;
+}
+
+.drop {
+    .flex(column, space-evenly, center);
+    padding: 15px;
+    background: @AppWhite;
+    position: absolute;
+    top: 220px;
+    right: 50px;
+    border-radius: 15px;
+    height: 100px;
+}
+
+.dropdown {
+    background: @AppWhite;
+    color: @AppDark;
+    border-radius: 15px 15px 0 0;
 }
