@@ -62,10 +62,10 @@ let pdata = {
         'https://www.linkedin.com/in/thomas-hessburg-596948180/'],
     will: ['https://github.com/brellin',
         'https://www.linkedin.com/in/brellin/'],
-    sammy: ['#',
-        '#'],
+    sammy: ['https://github.com/Captmoonshot',
+        'https://www.linkedin.com/in/sammy-lee-89944282/'],
     manjula: ['https://github.com/manjulamishra',
-        '#']
+        'https://www.linkedin.com/in/manjula-mishra-8059821b/']
 };
 
 // CTA Scroll

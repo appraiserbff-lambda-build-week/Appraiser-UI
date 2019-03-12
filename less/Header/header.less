@@ -1,15 +1,17 @@
 header {
     padding: 0 0 50px;
-    width: 100%;
     background: @HeaderBG;
     .flex(row, center, center);
     flex-wrap: wrap;
     border-bottom: 1px groove @AppBorder;
-    div {
+    div.img {
         .flex(row, center, center);
-        width: 50%;
+        width: 100%;
         img {
             max-width: 400px;
+            @media @phone {
+                width: 200px;
+            }
         }
     }
     nav {
@@ -24,23 +26,19 @@ header {
             &:hover {
                 color: @AppDark;
             }
-        }
-        input {
-            display: none;
+            @media @phone {
+                width: 100%;
+                text-align: center;
+            }
         }
         @media @tab {
             width: 100%;
             .flex(row, space-around, center);
             padding-top: 50px;
         }
-    }
-    h1 {
-        font-size: 4rem;
-        font-weight: bold;
-        color: @AppWhite;
-        @media @tab {
-            font-size: 3.5rem;
-            width: 50%;
+        @media @phone {
+            .flex(column, center, center);
+            width: 100%;
         }
     }
 }

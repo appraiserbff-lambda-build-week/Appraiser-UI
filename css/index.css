@@ -124,7 +124,6 @@ table {
 }
 header {
   padding: 0 0 50px;
-  width: 100%;
   background: #06560970;
   display: flex;
   flex-direction: row;
@@ -133,15 +132,20 @@ header {
   flex-wrap: wrap;
   border-bottom: 1px groove #1D2A1D;
 }
-header div {
+header div.img {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
 }
-header div img {
+header div.img img {
   max-width: 400px;
+}
+@media (max-width: 500px) {
+  header div.img img {
+    width: 200px;
+  }
 }
 header nav {
   width: 100%;
@@ -160,8 +164,11 @@ header nav a {
 header nav a:hover {
   color: #7D7B7B;
 }
-header nav input {
-  display: none;
+@media (max-width: 500px) {
+  header nav a {
+    width: 100%;
+    text-align: center;
+  }
 }
 @media (max-width: 800px) {
   header nav {
@@ -173,15 +180,13 @@ header nav input {
     padding-top: 50px;
   }
 }
-header h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #E9E9E9;
-}
-@media (max-width: 800px) {
-  header h1 {
-    font-size: 3.5rem;
-    width: 50%;
+@media (max-width: 500px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }
 .ctaholder {
@@ -204,6 +209,12 @@ a.cta {
 a.cta:hover {
   padding: 25px 60px;
 }
+@media (max-width: 500px) {
+  a.cta {
+    margin: 5px 0;
+    padding: 10px 20px;
+  }
+}
 .main {
   margin-top: 30%;
   display: flex;
@@ -224,6 +235,12 @@ a.cta:hover {
   width: 50%;
   color: #065608;
   border-radius: 150px 150px 0px 0px;
+}
+@media (max-width: 500px) {
+  .main .main-header {
+    font-size: 2rem;
+    margin-top: -35px;
+  }
 }
 .main section {
   margin: 100px 0;
@@ -262,8 +279,7 @@ a.cta:hover {
 }
 @media (max-width: 500px) {
   .main section div {
-    width: 98%;
-    margin: 1%;
+    width: 75%;
   }
 }
 @media (max-width: 800px) {
@@ -274,16 +290,28 @@ a.cta:hover {
     align-items: center;
   }
 }
+@media (max-width: 500px) {
+  .main {
+    border-radius: 50px 50px 0 0;
+  }
+}
 form {
   white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 75%;
 }
 form input {
   border-radius: 5px;
+  width: 100%;
 }
 form textarea {
   border-radius: 5px;
   border: 2px inset;
   resize: none;
+  width: 100%;
 }
 .about {
   display: flex;
@@ -370,7 +398,6 @@ form textarea {
   font-size: 2rem;
 }
 .main.about {
-  border-radius: 150px 150px 0 0;
   margin-top: 65px;
 }
 body {
@@ -409,9 +436,10 @@ footer {
 .sticky a {
   margin-top: 0px;
 }
-.login-stick {
-  position: absolute;
-  top: 0px;
+@media (max-width: 500px) {
+  .sticky {
+    padding: 17.5px 0;
+  }
 }
 .nojump {
   background: none;
