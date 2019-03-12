@@ -4,17 +4,61 @@
     flex-wrap: wrap;
     background: @AppWhite;
     width: 100%;
-    border-radius: 5% 5% 0px 0px;
-    h2 {
+    border-radius: 150px 150px 0px 0px;
+    .main-header {
         margin-top: -65px;
         background: @AppWhite;
         padding: 15px 30px;
+        text-align: center;
         font-size: 3rem;
-        width: fit-content;
+        width: 50%;
         color: @AppGreen;
-        border-radius: 50px 50px 0px 0px;
+        border-radius: 150px 150px 0px 0px;
     }
-    p {
-        margin: 100px;
+    section {
+        margin: 100px 0;
+        .flex(row, space-around, flex-start);
+        width: 100%;
+        div {
+            .flex(column, center, center);
+            width: 45%;
+            margin: 2.5%;
+            background: @MainDivBG;
+            padding: 25px;
+            border-radius: 35% 35% 15px 15px;
+            box-shadow: @AppMid 0 0 25px;
+            h2 {
+                margin: 0 0 20px;
+                color: @AppRed;
+                font-size: 2rem;
+                background: none;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            @media @tab {
+                width: 80%;
+                margin: 10%;
+            }
+            @media @phone {
+                width: 98%;
+                margin: 1%;
+            }
+        }
+        @media @tab {
+            .flex(column, center, center);
+        }
+    }
+}
+
+form {
+    white-space: pre-line;
+    input {
+        border-radius: 5px;
+    }
+    textarea {
+        border-radius: 5px;
+        border: 2px inset;
+        resize: none;
     }
 }

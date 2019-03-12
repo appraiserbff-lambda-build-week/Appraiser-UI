@@ -213,19 +213,77 @@ a.cta:hover {
   flex-wrap: wrap;
   background: #E9E9E9;
   width: 100%;
-  border-radius: 5% 5% 0px 0px;
+  border-radius: 150px 150px 0px 0px;
 }
-.main h2 {
+.main .main-header {
   margin-top: -65px;
   background: #E9E9E9;
   padding: 15px 30px;
+  text-align: center;
   font-size: 3rem;
-  width: fit-content;
+  width: 50%;
   color: #065608;
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 150px 150px 0px 0px;
 }
-.main p {
-  margin: 100px;
+.main section {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+.main section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  margin: 2.5%;
+  background: rgba(158, 163, 164, 0.5);
+  padding: 25px;
+  border-radius: 35% 35% 15px 15px;
+  box-shadow: #9EA3A4 0 0 25px;
+}
+.main section div h2 {
+  margin: 0 0 20px;
+  color: #BF6363;
+  font-size: 2rem;
+  background: none;
+}
+.main section div p {
+  font-size: 1.2rem;
+}
+@media (max-width: 800px) {
+  .main section div {
+    width: 80%;
+    margin: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .main section div {
+    width: 98%;
+    margin: 1%;
+  }
+}
+@media (max-width: 800px) {
+  .main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+form {
+  white-space: pre-line;
+}
+form input {
+  border-radius: 5px;
+}
+form textarea {
+  border-radius: 5px;
+  border: 2px inset;
+  resize: none;
 }
 .about {
   display: flex;
@@ -294,7 +352,7 @@ a.cta:hover {
   align-items: center;
   flex-wrap: wrap;
   margin: 50px;
-  background: rgba(233, 233, 233, 0.541);
+  background: rgba(233, 233, 233, 0.5);
   width: 100%;
 }
 .us a {
@@ -335,7 +393,7 @@ footer {
   color: #7D7B7B;
   background: #E9E9E9;
   width: 100%;
-  border-radius: 0px 0px 5% 5%;
+  border-radius: 0px;
   padding: 30px 0;
   white-space: pre-line;
   line-height: 2;
@@ -346,6 +404,7 @@ footer {
   padding: 35px 0;
   background: #06560970;
   border-bottom: 1px groove #1D2A1D;
+  z-index: 3;
 }
 .sticky a {
   margin-top: 0px;
