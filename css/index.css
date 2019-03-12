@@ -275,6 +275,18 @@ a.cta:hover {
     border-radius: 100px;
   }
 }
+.about .people .person .git {
+  width: 35px;
+  position: relative;
+  top: -200px;
+  left: 225px;
+}
+.about .people .person .in {
+  width: 50px;
+  position: relative;
+  top: -200px;
+  left: 225px;
+}
 .us {
   display: flex;
   flex-direction: row;
