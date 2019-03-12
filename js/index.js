@@ -89,5 +89,9 @@ peeps.forEach(per => new Plinks(per));
 // Add login link
 let login = document.createElement('a');
 login.innerHTML = 'Log In';
-login.href = 'https://ajbrush.com/Appraiser';
+login.href = 'https://ajbrush.com/home/';
 nav.appendChild(login);
+
+// CTA href
+let ctas = cta.querySelectorAll('.cta');
+ctas.forEach(cta => cta.href = 'https://ajbrush.com/home/');
