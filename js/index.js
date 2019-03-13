@@ -7,6 +7,7 @@ let peeps = document.querySelectorAll('.person'),
     main = document.querySelector('.main'),
     submit = document.querySelector('input[type="submit"]'),
     sent = document.querySelector('#sent'),
+    form = document.querySelector('form'),
     sticky = cta.offsetTop;
 
 // People Class
@@ -103,11 +104,15 @@ let ok = document.createElement('button');
 ok.innerText = 'OK';
 sent.appendChild(ok);
 ok.addEventListener('click', function () {
-    sent.style.display = 'none';
+    sent.style.visibility = 'hidden';
+    main.style.opacity = '1';
+    cta.style.opacity = '1';
 });
 
 // Submit trigger #sent
-submit.href = '';
-submit.addEventListener('click', function () {
-    sent.style.display = 'flex';
-})
+submit.addEventListener('click', function (e) {
+    e.preventDefault();
+    sent.style.visibility = 'visible';
+    main.style.opacity = '.75';
+    cta.style.opacity = '.75';
+});
