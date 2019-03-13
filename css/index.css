@@ -443,10 +443,10 @@ form input[type=submit]:hover {
   margin-top: -20%;
   margin-left: -35%;
   z-index: 5;
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(50, 50, 50, 0.15)), url(../images/house-money.jpg) no-repeat center / cover;
-  color: #7D7B7B;
+  background: url(../images/house-money.jpg) no-repeat center / cover;
+  color: #9EA3A4;
   font-size: 3rem;
-  text-shadow: black 0px 0px 10px;
+  text-shadow: black 1px 1px 2px;
   visibility: hidden;
   border-radius: 50px;
 }
@@ -454,6 +454,7 @@ form input[type=submit]:hover {
   padding: 10px 30px;
   border-radius: 15px;
   border: 1px solid #7D7B7B;
+  box-shadow: black 1px 1px 2px;
 }
 #sent button:hover {
   cursor: pointer;
