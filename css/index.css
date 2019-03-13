@@ -382,24 +382,24 @@ form input[type=submit]:hover {
 .about .people .person .git {
   width: 35px;
   position: relative;
-  top: -200px;
+  top: -100px;
   left: 225px;
 }
 @media (max-width: 500px) {
   .about .people .person .git {
-    top: -125px;
+    top: -25px;
     left: 150px;
   }
 }
 .about .people .person .in {
   width: 50px;
   position: relative;
-  top: -200px;
+  top: -100px;
   left: 225px;
 }
 @media (max-width: 500px) {
   .about .people .person .in {
-    top: -125px;
+    top: -25px;
     left: 150px;
   }
 }

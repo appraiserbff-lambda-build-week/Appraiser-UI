@@ -48,8 +48,8 @@ class Plinks extends People {
         linkedIn.classList.add('in');
         this.in.appendChild(linkedIn);
         // Add to .person
-        this.person.appendChild(this.gh);
-        this.person.appendChild(this.in);
+        this.person.prepend(this.in);
+        this.person.prepend(this.gh);
     }
 }
 
