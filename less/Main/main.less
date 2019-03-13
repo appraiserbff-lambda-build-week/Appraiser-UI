@@ -13,7 +13,7 @@
         font-size: 3rem;
         width: 50%;
         color: @AppGreen;
-        border-radius: 150px 150px 0px 0px;
+        border-radius: 150px 150px 15px 15px;
         @media @phone {
             font-size: 2rem;
             margin-top: -35px;
@@ -24,8 +24,9 @@
         .flex(row, space-around, flex-start);
         width: 100%;
         div {
-            .flex(column, center, center);
+            .flex(column, flex-start, center);
             width: 45%;
+            height: 200px;
             margin: 2.5%;
             background: @MainDivBG;
             padding: 25px;
@@ -48,6 +49,9 @@
                 width: 75%;
             }
         }
+        div.contact {
+            height: max-content;
+        }
         @media @tab {
             .flex(column, center, center);
         }
@@ -59,16 +63,28 @@
 
 form {
     white-space: pre-line;
-    .flex(column, center, flex-start);
+    .flex(column, flex-start, flex-start);
     width: 75%;
-    input {
-        border-radius: 5px;
-        width: 100%;
-    }
+    input,
     textarea {
-        border-radius: 5px;
+        border-radius: 15px;
         border: 2px inset;
+        padding: 10px;
+        margin: 5px 0 10px;
         resize: none;
         width: 100%;
+    }
+    input[type=submit] {
+        background: @AppDark;
+        color: @AppWhite;
+        border: 1px solid @AppBorder;
+        width: 106%;
+        padding: 10px 20px;
+        transition: background 1s ease-out 0s;
+        margin: 5px 0px;
+        &:hover {
+            background: @AppMid;
+            cursor: pointer;
+        }
     }
 }

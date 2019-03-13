@@ -236,7 +236,7 @@ a.cta:hover {
   font-size: 3rem;
   width: 50%;
   color: #065608;
-  border-radius: 150px 150px 0px 0px;
+  border-radius: 150px 150px 15px 15px;
 }
 @media (max-width: 500px) {
   .main .main-header {
@@ -255,9 +255,10 @@ a.cta:hover {
 .main section div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 45%;
+  height: 200px;
   margin: 2.5%;
   background: rgba(158, 163, 164, 0.5);
   padding: 25px;
@@ -284,6 +285,9 @@ a.cta:hover {
     width: 75%;
   }
 }
+.main section div.contact {
+  height: max-content;
+}
 @media (max-width: 800px) {
   .main section {
     display: flex;
@@ -301,19 +305,31 @@ form {
   white-space: pre-line;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 75%;
 }
-form input {
-  border-radius: 5px;
-  width: 100%;
-}
+form input,
 form textarea {
-  border-radius: 5px;
+  border-radius: 15px;
   border: 2px inset;
+  padding: 10px;
+  margin: 5px 0 10px;
   resize: none;
   width: 100%;
+}
+form input[type=submit] {
+  background: #7D7B7B;
+  color: #E9E9E9;
+  border: 1px solid #1D2A1D;
+  width: 106%;
+  padding: 10px 20px;
+  transition: background 1s ease-out 0s;
+  margin: 5px 0px;
+}
+form input[type=submit]:hover {
+  background: #9EA3A4;
+  cursor: pointer;
 }
 .about {
   display: flex;
