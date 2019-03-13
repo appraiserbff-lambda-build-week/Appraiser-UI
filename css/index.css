@@ -430,6 +430,26 @@ form input[type=submit]:hover {
 .main.about {
   margin-top: 65px;
 }
+#sent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 80%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -248px;
+  margin-left: -437px;
+  z-index: 5;
+  background: url(../images/house-money.jpg) no-repeat center / cover;
+  color: #BF6363;
+  font-size: 3rem;
+  text-shadow: #7D7B7B 0px 0px 10px;
+  display: none;
+  border-radius: 50px;
+}
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background: #E9E9E9 url(../images/door-key.jpg) fixed no-repeat center;

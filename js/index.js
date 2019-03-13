@@ -5,6 +5,8 @@ let peeps = document.querySelectorAll('.person'),
     us = document.querySelector('.us'),
     nav = document.querySelector('nav'),
     main = document.querySelector('.main'),
+    submit = document.querySelector('input[type="submit"]'),
+    sent = document.querySelector('#sent'),
     sticky = cta.offsetTop;
 
 // People Class
@@ -95,3 +97,17 @@ nav.appendChild(login);
 // CTA href
 let ctas = cta.querySelectorAll('.cta');
 ctas.forEach(cta => cta.href = 'https://ajbrush.com/home/');
+
+// #sent add 'ok' button
+let ok = document.createElement('button');
+ok.innerText = 'OK';
+sent.appendChild(ok);
+ok.addEventListener('click', function () {
+    sent.style.display = 'none';
+});
+
+// Submit trigger #sent
+submit.href = '';
+submit.addEventListener('click', function () {
+    sent.style.display = 'flex';
+})
