@@ -283,6 +283,7 @@ a.cta:hover {
 @media (max-width: 500px) {
   .main section div {
     width: 75%;
+    height: max-content;
   }
 }
 .main section div.contact {
