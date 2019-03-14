@@ -92,12 +92,14 @@ peeps.forEach(per => new Plinks(per));
 // Add login link
 let login = document.createElement('a');
 login.innerHTML = 'Log In';
-login.href = 'https://ajbrush.com/home/';
+login.href = 'https://ajbrush.com/home/account_settings';
 nav.appendChild(login);
 
 // CTA href
 let ctas = cta.querySelectorAll('.cta');
-ctas.forEach(cta => cta.href = 'https://ajbrush.com/home/');
+ctas[0].href = 'https://ajbrush.com/home/cards/new';
+ctas[1].href = 'https://ajbrush.com/home/cards/new';
+ctas[2].href = 'https://ajbrush.com/home/';
 
 // #sent add 'ok' button
 let ok = document.createElement('button');

@@ -257,6 +257,7 @@ a.cta:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-height: max-content;
   width: 45%;
   height: 200px;
   margin: 2.5%;
@@ -460,6 +461,9 @@ form input[type=submit]:hover {
 #sent button:hover {
   cursor: pointer;
   background: #9EA3A4;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
