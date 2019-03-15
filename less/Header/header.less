@@ -1,0 +1,46 @@
+header {
+    padding: 0 0 50px;
+    background: @HeaderBG;
+    .flex(row, center, center);
+    flex-wrap: wrap;
+    border-bottom: 1px groove @AppBorder;
+    width: 100%;
+    div.img {
+        .flex(row, center, center);
+        width: 100%;
+        img {
+            width: 100%;
+            max-width: 400px;
+            @media @phone {
+                width: 200px;
+            }
+        }
+    }
+    nav {
+        width: 100%;
+        .flex(row, space-around, center);
+        a {
+            color: @AppWhite;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 1s ease-out 0s;
+            padding: 10px 0;
+            &:hover {
+                color: @AppDark;
+            }
+            @media @phone {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media @tab {
+            width: 100%;
+            .flex(row, space-around, center);
+            padding-top: 50px;
+        }
+        @media @phone {
+            .flex(column, center, center);
+            width: 100%;
+        }
+    }
+}

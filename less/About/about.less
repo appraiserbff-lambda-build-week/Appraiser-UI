@@ -1,0 +1,81 @@
+.about {
+    .flex(column, center, center);
+    .people {
+        margin-top: 100px;
+        .flex(column, center, center);
+        width: 60%;
+        a {
+            text-decoration: none;
+        }
+        .person {
+            color: @AppWhite;
+            .flex(column, flex-end, center);
+            width: 100%;
+            width: 500px;
+            height: 500px;
+            border-radius: 150px;
+            margin: 100px 0;
+            box-shadow: @AppDark 4px 8px 16px;
+            h3 {
+                font-size: 3rem;
+                @media @phone {
+                    font-size: 2.3rem;
+                }
+            }
+            h4 {
+                font-size: 1.5rem;
+            }
+            @media @phone {
+                width: 300px;
+                height: 300px;
+                border-radius: 100px;
+            }
+            .git {
+                width: 35px;
+                position: relative;
+                top: -100px;
+                left: 225px;
+                @media @phone {
+                    top: -25px;
+                    left: 150px;
+                }
+            }
+            .in {
+                width: 50px;
+                position: relative;
+                top: -100px;
+                left: 225px;
+                @media @phone {
+                    top: -25px;
+                    left: 150px;
+                }
+            }
+        }
+    }
+}
+
+.us {
+    .flex(row, space-evenly, center);
+    flex-wrap: wrap;
+    margin: 50px;
+    background: @AboutBG;
+    width: 100%;
+    a {
+        font-size: 1.7rem;
+        background: @AppWhite;
+        text-decoration: none;
+        padding: 15px 20px;
+        margin: 25px 35px;
+        color: @AppRed;
+        border-radius: 50px;
+        display: block;
+        transition: font-size 1s ease-out 0s;
+        &:hover {
+            font-size: 2rem;
+        }
+    }
+}
+
+.main.about {
+    margin-top: 65px;
+}

@@ -1,0 +1,19 @@
+// Variables
+@AppGreen: #065608;
+@AppWhite: #E9E9E9;
+@AppDark: #7D7B7B;
+@AppMid: #9EA3A4;
+@AppRed: #BF6363;
+@AppBorder: #1D2A1D;
+@HeaderBG: rgba(3, 86, 9, .5);
+@AboutBG: rgba(233, 233, 233, 0.5);
+@MainDivBG: rgba(158, 163, 164, 0.5);
+@tab: ~'(max-width: 800px)';
+@phone: ~'(max-width: 500px)';
+// Mixin(s)
+.flex(@dir, @main, @cross) {
+    display: flex;
+    flex-direction: @dir;
+    justify-content: @main;
+    align-items: @cross;
+}
